@@ -1,0 +1,119 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+header{
+    height:100vh;
+    width:100%;
+    background-image:url(images/gfY6Pk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background-position: fixed;
+}
+
+.main-header{
+    width:300px;
+    height:380px;
+    background:radial-gradient(at center,rgba(214,202,202,0.05),rgba(224,217,217,0.5));
+    border-radius: 5px;
+    overflow:hidden;
+    overflow-y: scroll;
+    margin:50px auto;
+}
+button{
+    height:60px;
+    width:150px;
+    border-radius: 50px;
+    border:none;
+    outline:none;
+    background:#fff;
+    color:#fff;
+    top:50%;
+    left:50%;
+    transform: translate(50%,50%);
+    margin-bottom: 15px;
+    color: rgb(26, 3, 9);
+   font-size: 20px;
+    font-family: 'Girassol', cursive;
+}
+
+.scroll{
+    width:400px;
+    background:rgb(11,11,114);
+    height:300px;
+    overflow:hidden;
+    overflow-y:scroll;
+}
+
+.b{
+    color:rgb(17, 17, 16);
+    font-family: 'Goblin One', cursive;
+    font-size:40px;
+    padding-left: 60px;
+
+}
+
+button:hover{
+    background:#ecff99;
+    box-shadow:0 0 10px #ecff99,0 0 40px #ecff99,0 0 80px #ecff99;
+}
+
+.c{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 60px;
+    background:rgb(243, 239, 239);
+   mix-blend-mode:screen;
+   margin:30px auto;
+   width:600px;
+   padding-left:10px;
+}
+
+a{
+    color:black;
+}
+
+@media(max-width:670px)
+{
+    .c{
+        font-size:30px;
+        width:300px;
+    }
+}
+@media (max-width:330px)
+{
+    .main-header
+    {
+        width:250px;
+        height:300px;
+    }
+    
+    .b{
+        padding-left:80px;
+        font-size: 30px;
+    }
+
+    .y{
+        display:grid;
+        place-items: center;
+    }
+    button{
+        font-size:10px;
+        height:40px;
+        margin-bottom: 20px;
+        width:100px;
+        top:50%;
+    left:60%;
+    transform: translate(80%,50%);
+    }
+    
+    .c{
+        font-size: 16px;
+        width:160px;
+    }
+}

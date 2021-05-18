@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding:0;
+}
+.y{
+    color:#fff;
+    font-size:40px;
+    margin:30px 40px;
+    transform: translateY(380%);
+}
+
+p{
+    color:darkturquoise;
+    margin:400px 40px;
+   
+    font-size:100px;
+    font-family: 'Courgette', cursive;
+}
+
+header{
+    background-color: #08001b;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+   
+}
+.container{
+   background: #08001b;
+   height:100vh;
+   transform:translateX(32%) translateY(-15%); display:flex; flex-wrap:wrap;
+   overflow-y: scroll;
+}
+
+.container .card{
+    width:300px;
+    height:290px;
+    margin-left:105px;
+    margin-top:30px;
+    background:#250285;
+    box-shadow: 0 20px 40px rgba(112, 189, 224, 0.2);
+    overflow:hidden;
+}
+
+.container:hover .card{
+    opacity:0.2;
+}
+
+.container .card:hover{
+    opacity:1;
+}
+
+.container .card span{
+    transition:0.5s;
+    opacity:0;
+}
+
+.container .card:hover span{
+    opacity:1;
+}
+
+.container .card::before{
+    content:'';
+    position:absolute;
+    top:2px;
+    left:2px;
+    bottom:2px;
+    width:50%;
+    background:rgba(255,255,255,0.1);
+    pointer-events:none;
+}
+
+.container .card .content{
+    padding:30px;
+    text-align:center;
+}
+
+.container .card .content p{
+    position:relative;
+    font-size:1em;
+    color:#fff;
+    z-index:2;
+    opacity:0.5;
+    font-weight:300;
+    transition:0.5s;
+}
+.container .card:hover .content p{
+    opacity:1;
+}
+
+.container .card span{
+    transition:0.5s;
+}
+
+.container .card span:nth-child(1)
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:3px;
+    background:linear-gradient(to right,transparent, #1779ff);
+    animation:animate1 2s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform:translateX(100%);
+    }
+}
+
+.container .card span:nth-child(2)
+{
+    position:absolute;
+    top:0;
+    right:0;
+    width: 3px;
+    height:100%;
+    background:linear-gradient(to bottom,transparent, #1779ff);
+    animation:animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform:translateY(100%);
+    }
+}
+
+.container .card span:nth-child(3)
+{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height:3px;
+    background:linear-gradient(to left,transparent, #1779ff);
+    animation:animate3 2s linear infinite;
+}
+
+
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+.container .card span:nth-child(4)
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:3px;
+    background:linear-gradient(to top,transparent, #1779ff);
+    animation:animate4 2s linear infinite;
+}
+
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform:translateY(-100%);
+    }
+}
+
+@media (max-width:1080px)
+{
+    .container .card{
+        width:300px;
+      height:320px;
+      margin-top:90px;
+      margin-bottom:70px;
+    }
+
+    .y{
+        font-size:40px;
+        text-align: center;
+        transform: translateY(-50%);
+        padding-top:2px;
+    }
+    .container{
+        transform:translateX(5%) translateY(-10%);
+    }
+}
+
+@media (max-width:600px)
+{
+    .container .card{
+        width:200px;
+      height:220px;
+      margin-top:30px;
+      margin-bottom:20px;
+    }
+   
+    .y{
+        font-size:30px;
+        text-align: center;
+        transform: translateY(-50%);
+        padding-top:2px;
+    }
+    .container{
+        transform:translateX(10%) translateY(-10%);
+    }
+    .container .card .content p{
+        font-size:7px;
+    }
+}
+
+@media (max-width:460px)
+{
+    .container .card{
+        width:180px;
+      height:220px;
+      margin-left:60px;
+      margin-left:40px;
+    }
+
+    .y{
+        transform: translateY(20%);
+        margin-left:70px;
+        margin-top:10px;
+        font-size:20px;
+    }
+    .container{
+        transform:translateX(15%);
+    }
+
+    .container .card .content p{
+        font-size:7px;
+    }
+}
+@media (max-width:310px)
+{
+    .container.card{
+        width:150px;
+      height:220px;
+      margin-left:10px;
+    }
+    .container{
+        transform:translateY(-5%);
+    }
+
+    .y{
+        transform: translateY(0);
+        margin-left:30px;
+        margin-top:10px;
+        font-size:20px;
+    }
+    
+    .container .card .content p{
+        font-size:7px;
+    }
+}
+
